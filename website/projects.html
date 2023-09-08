@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Projects - Heonjae Shin</title>
+
+    <link rel="icon" type="image/png" href="static/img/ae.png">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/bf9c856106.js" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;600&family=Lato&family=Lobster&display=swap"
+          rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+          crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/css/styles.css">
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <span class="brand mb-0">AE</span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="button fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="about.html">About</a>
+                <a class="nav-link" href="projects.html">Projects</a>
+                <a class="nav-link" href="https://dev.to/alexeversmeyer" target="_blank">Blog</a>
+                <a class="nav-link" href="https://resume.alexeversmeyer.com" target="_blank">Resume</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="jumbotron jumbotron-fluid" style="background-image: url(static/img/bg/projects_bg.jpg)">
+    <div class="jumbo-overlay"></div>
+    <div class="container">
+        <div class="jumbo-title text-center">
+            <h1 class="big-heading">My Projects</h1>
+            <p class="subheading">What I'm working on.</p>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row row-cols-1 row-cols-xl-3 row-cols-lg-2">
+      <div class="col mb-4">
+        <div class="card h-100">
+            <img src="static/img/proj/proj-skyboy.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h3 class="card-title">Event-Driven Python</h3>
+                <p class="card-text text-muted status">
+                    Status: MVP, deployed
+                </p>
+                <p class="card-text">FPV quadcopter post-flight telemetry visualization tool. Streamlit, Python,
+                    Docker, ECS. Deployed on AWS with modular Terraform configuration. Branch-based GitHub Actions for
+                    CI/CD.
+                </p>
+            </div>
+            <div class="card-footer bg-transparent">
+                <small class="text-muted">
+                    <button type="button" class="btn custom btn-proj" data-toggle="modal" data-target="#skyboyModal">
+                        More Info
+                    </button>
+                    <a class="btn custom-outline btn-proj" href="https://github.com/aeversme/skyboy-app"
+                       target="_blank">
+                        <i class="fas fa-code-branch"></i> GitHub</a>
+                </small>
+            </div>
+        </div>
+      </div>
+      <div class="col mb-4">
+        <div class="card h-100">
+            <img src="static/img/proj/proj-etl.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h3 class="card-title">Event-Driven Python</h3>
+                <p class="card-text text-muted status">
+                    Status: complete, deployed
+                </p>
+                <p class="card-text">An automated Python ETL pipeline for processing and visualizing COVID data.
+                    Lambda, DynamoDB, SNS, EventBridge. Deployed on AWS with Terraform. GitHub Actions for CI/CD.
+                </p>
+            </div>
+            <div class="card-footer bg-transparent">
+                <small class="text-muted">
+                    <button type="button" class="btn custom btn-proj" data-toggle="modal" data-target="#pythonetlModal">
+                        More Info
+                    </button>
+                    <a class="btn custom-outline btn-proj" href="https://github.com/aeversme/cloud-challenge-python-etl"
+                       target="_blank">
+                        <i class="fas fa-code-branch"></i> GitHub</a>
+                </small>
+            </div>
+        </div>
+
+
+<!-- Modals -->
+<div class="modal fade" id="skyboyModal" tabindex="-1" aria-labelledby="skyboyModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="skyboyModalLabel">Skyboy App</h3>
+            </div>
+            <div class="modal-body">
+                <h5>An FPV quadcopter post-flight telemetry visualization tool</h5>
+                <p>
+                    <ul>
+                        <li>Python, Streamlit</li>
+                        <li>Docker, ECR, ECS</li>
+                        <li>Terraform, Terraform Cloud</li>
+                        <li>Git, GitHub, Github Actions</li>
+                    </ul>
+                </p>
+                <p>Streamlit application, authored in Python, that transforms an uploaded CSV file and displays flight
+                    metrics, a map with a flight path trace, and graphs of relevant sets of data. The app and its
+                    dependencies are packaged as a Docker image, uploaded to Amazon Elastic Container Registry, and
+                    launched serverlessly using AWS Fargate.</p>
+                <p>The Terraform configuration for this project is modularized, and several files are provided as
+                    templates for manipulation within GitHub Actions. The primary Actions (both for building and
+                    uploading the app's Docker image, and for deploying the app's infrastructure) are reusable, and can
+                    be called from either the dev of main branches of the repository.</p>
+                <p>Some of the challenges I solved during development:</p>
+                <p>
+                    <ul>
+                        <li>Many of Streamlit's abstracted integrations (for example, plotly) are easy to work with,
+                            but I found adding a map with a trace of the quadcopter's GPS flight path to be rather
+                            difficult. After a lot of trial and error, I determined the format that the flight path map
+                            layer needed and added a transform to the Pandas dataframe to aggregate the appropriate
+                            columns.</li>
+                        <li>Keeping the Mapbox API key secret took me down several rabbit holes, because the Streamlit
+                            app looks for that key in a .toml file. Since TOML is a markup language and not a scripting
+                            language, I couldn't simply pass the key in as an environment variable. My solution was to
+                            create the necessary config file as an early step in the GitHub Action, using the 'sed'
+                            command, before building the Docker image.</li>
+                        <li>I set up two separate AWS accounts within an organization for this app: one account for
+                            development and testing, and one for production. I wanted a way to deploy to the correct
+                            account depending on which branch of the repository was being used, so that I didn't end up
+                            with multiple infrastructures within one account. After testing each action in the dev
+                            account, I refactored them to be reusable with certain required secrets and parameters.
+                            These reusable Action scripts are called by smaller, branch- and path-dependent Actions.</li>
+                    </ul>
+                </p>
+                <p>Design narratives on Dev.to (click to read):
+                    <ul>
+                        <li><a href="https://dev.to/alexeversmeyer/introducing-the-skyboy-app-3h22" target="_blank">
+                            Introducing the Skyboy App</a></li>
+                        <li><a href="https://dev.to/alexeversmeyer/cicd-github-actions-with-docker-and-amazon-ecr-nal"
+                               target="_blank">CI/CD: GitHub Actions with Docker and Amazon ECR</a></li>
+                        <li><a href="https://dev.to/alexeversmeyer/cicd-branch-based-terraform-deployment-m5e"
+                               target="_blank">CI/CD: Branch-based Terraform Deployment</a></li>
+                    </ul>
+                </p>
+                <p>To-dos include: checks and conditionals for different CSV column headings, to accommodate
+                    different radio/flight controller combinations; automated unit-testing; ability for users to
+                    register/authenticate and upload telemetry files to S3.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn custom" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="pythonetlModal" tabindex="-1" aria-labelledby="pythonetlModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="pythonetlModalLabel">Event-Driven Python</h3>
+            </div>
+            <div class="modal-body">
+                <h5>Automated ETL processing pipeline for COVID-19 data</h5>
+                <p>
+                    <ul>
+                        <li>Python, boto3 SDK, Pycharm unit testing</li>
+                        <li>Lambda, DynamoDB, SNS, EC2</li>
+                        <li>Terraform, Terraform Cloud</li>
+                        <li>Git, GitHub, Github Actions</li>
+                        <li>Redash</li>
+                    </ul>
+                </p>
+                <p>An AWS Lambda function, authored in Python and using boto3 to interact with other AWS resources,
+                    downloads data related to COVID-19 and performs an ETL process. The data is written to DynamoDB,
+                    where it can be queried by a self-hosted instance of Redash to create a visualization dashboard. A
+                    message is sent to a Simple Notification Service topic whenever the process finishes or encounters
+                    an error. The Lambda function is triggered daily by an Amazon EventBridge rule.</p>
+                <p>I am particularly pleased with the choice I made to provision all of my infrastructure using
+                    Terraform. This was my first time using it, so I spent several hours learning the basics and
+                    applying that knowledge to my configuration. Terraform seems like a great tool to use in my
+                    pipelines going forward, especially if/as I branch out to other cloud providers.</p>
+                <p>Numerous challenges presented themselves throughout the development process. Some examples:</p>
+                <p>
+                    <ul>
+                        <li>After working out the Python logic locally, I used multiple AWS accounts for testing and
+                            production. Each account's resources were deployed from a separate repository, which made
+                            for a lot of copy/paste. This process could be streamlined using git branches and
+                            environmental variables, something I would like to learn and practice.</li>
+                        <li>An IAM permission scoping issue threw me for a loop, sidetracking the project for several
+                            hours as I erroneously refactored the Terraform configuration.</li>
+                        <li>There were several key parts to this challenge that I had to (or wanted to) learn from
+                            scratch: boto3, AWS's Python SDK; Terraform; and unit testing in Python. Had these topics
+                            been familiar to me already, I suspect this project would have taken far less time.</li>
+                    </ul>
+                </p>
+                <p>Future improvements may include: refactoring the Terraform configuration file; writing more
+                    comprehensive unit tests; and revisiting queries and visualizations in Redash.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn custom" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <footer class="text-center">
+        <a href="https://www.linkedin.com/in/heonjae-shin-933a4a208/"><i class="footer-icon fab fa-linkedin-in fa-4x"
+                                                                 aria-hidden="true"></i></a>
+        <a href="https://github.com/heonjaes"><i class="footer-icon fab fa-github fa-4x" aria-hidden="true"></i></a>
+        <p class="copyright text-muted">© 2023 HS</p>
+    </footer>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
