@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>About - Alex Eversmeyer</title>
+    <title>Home - Alex Eversmeyer</title>
 
     <link rel="icon" type="image/png" href="static/img/ae.png">
 
@@ -20,9 +20,8 @@
           rel="stylesheet">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
-          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
@@ -32,23 +31,23 @@
 
 <nav class="navbar navbar-expand-lg">
     <div class="container">
-        <span class="brand mb-0">HS</span>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <i class="button fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="counter-number nav-item nav-link" style="margin-right: 120px; color:orange;">Loading...</div>
+
             <div class="navbar-nav ml-auto">
                 <a class="nav-link" href="index.html">Home</a>
                 <a class="nav-link" href="about.html">About</a>
                 <a class="nav-link" href="projects.html">Projects</a>
-                <a class="nav-link" href="https://dev.to/alexeversmeyer" target="_blank">Blog</a>
-                <a class="nav-link" href="https://resume.alexeversmeyer.com" target="_blank">Resume</a>
+                <a class="nav-link" href="static/img/heonjaes_CV.pdf">Resume</a></li>
+                
             </div>
         </div>
     </div>
 </nav>
-
 <div class="container">
     <div class="col-lg-10 col-md-10 mx-auto mt-4"> 
         <div class="media media-about">
@@ -60,7 +59,8 @@
                     <br><br>    
                     If you want to get in touch, contact me via email:<br> 
                     heonjae.shin00@gmail.com</p>
-                
+                    <p class="subheading-aws" style="color: orange; text-align: right;">Deployed on AWS infrastructure</p>
+
             </div>
         </div>
     </div>
@@ -153,13 +153,6 @@
     
   </li>
 
-
-
-
-
-
-
-
 <div class="container">
     <footer class="text-center">
         <a href="https://www.linkedin.com/in/heonjae-shin-933a4a208/"><i class="footer-icon fab fa-linkedin-in fa-4x"
@@ -179,6 +172,9 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+
+<script src="js/index.js"></script>
+
 
 </body>
 </html>

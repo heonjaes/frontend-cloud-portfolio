@@ -64,6 +64,10 @@ hr {
     font-size: 1.1rem;
 }
 
+.subheading-aws {
+  font-size: 0.8rem;
+}
+
 .subheading-2 {
     font-size: 0.9rem;
     text-align: left;
@@ -162,6 +166,16 @@ hr {
     background-color: #ccf2f4;
     background-size: cover;
     background-attachment: scroll;
+}
+
+.jumbo-2-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #212529;
+  opacity: 20%;
 }
 
 .jumbo-overlay {
