@@ -140,14 +140,13 @@ resource "aws_route53_record" "resume_website" {
 }
 
 # Lambda
-
 resource "aws_lambda_function" "lambda_py" {
-  filename      = "../lambda/lambda4dynamodb.zip"
+  filename      = "lambda/lambda4dynamodb.zip"
   function_name = "py_lambda"
   role          = aws_iam_role.assume_policy.arn
   runtime = "python3.9"
   handler       = "lambda4dynamodb.lambda_handler"
-  source_code_hash = filebase64sha256("../lambda/lambda4dynamodb.zip")
+  source_code_hash = filebase64sha256("lambda/lambda4dynamodb.zip")
 
 }
 
