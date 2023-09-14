@@ -22,5 +22,5 @@ jobs:
 
       - name: Sync Website to S3
         run: |
-          aws s3 sync ./website s3://${{ secrets.S3_BUCKET_NAME }} --delete
+          aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }} --delete
 
